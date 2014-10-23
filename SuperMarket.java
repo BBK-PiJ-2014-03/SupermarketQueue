@@ -1,6 +1,6 @@
 public class SuperMarket {
     
-    private PersonQueue queueOne = new SuperMarketQueue();
+    private MeasureablePersonQueue queueOne = new SuperMarketQueue();
     
     public static void main(String[] args) {
         
@@ -10,15 +10,15 @@ public class SuperMarket {
     }
     
     public void launch() {
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 7; i++) {
             Person person = new Person(i);
             this.addPerson(person);
-            int n = queueOne.getQueueLength();
+            int n = queueOne.getLength();
             System.out.println("The queue at ASDA is " + n +
                                " People long.");
         }
         this.servePerson();
-        System.out.println("The queue at ASDA is " + (queueOne.getQueueLength_()) +
+        System.out.println("The queue at ASDA is " + (queueOne.getLength()) +
                                " People long.");
     }
     
@@ -29,9 +29,5 @@ public class SuperMarket {
     public Person servePerson() {
         return this.queueOne.retrieve();
     }
-    
-    //public int getQueueLength() {
-    //    return this.queueOne.getQueueLength_();
-    //}
 
 }

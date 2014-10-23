@@ -1,4 +1,4 @@
-public class SuperMarketQueue implements PersonQueue {
+public class SuperMarketQueue implements MeasureablePersonQueue {
     
     private Person[] personArray;
     
@@ -11,7 +11,7 @@ public class SuperMarketQueue implements PersonQueue {
         queueSize = 0;
     }
     
-    public int getQueueLength_() {
+    public int getLength() {
         return this.queueSize;
     }
     

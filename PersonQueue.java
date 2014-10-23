@@ -11,10 +11,4 @@ public interface PersonQueue {
     */
     
     Person retrieve();
-    
-    int getQueueLength();
 }
-
-//public interface MeasurablePersonQueue extends PersonQueue {
-//     int getLength();
-//}
